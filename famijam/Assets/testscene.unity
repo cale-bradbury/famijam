@@ -369,28 +369,20 @@ MonoBehaviour:
     - UnityEngine.Vector2
     - UnityEngine.Vector3
     - UnityEngine.Vector4
-    obj: {fileID: 305968262}
-    varName: smoothing
+    obj: {fileID: 1491379266}
+    varName: speed
     isMat: 0
-    componentName: UnityEngine.Transform, UnityEngine, Version=0.0.0.0, Culture=neutral,
+    componentName: ShipController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-    go: {fileID: 0}
+    go: {fileID: 1491379264}
     isVector: 0
     index: 0
-  minMax: {x: 0.1, y: 0.5}
+  minMax: {x: 0.1, y: 5}
   startValue: 0
   smoothing: 0.1
   minPosition: {fileID: 1112368839}
   maxPosition: {fileID: 1832811786}
   screenCamera: {fileID: 0}
-  test:
-    obj: {fileID: 1112368838}
-    component: UnityEngine.Transform, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-    varName: childCount
-    types:
-    - System.Single
-    - System.Int32
 --- !u!1 &363315768
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +444,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1065294877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1065294878}
+  - 114: {fileID: 1065294879}
+  m_Layer: 0
+  m_Name: StarChild
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065294878
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065294877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.19421814, y: -1, z: 3.4033756}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!114 &1065294879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065294877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920be9a4585fd5547a74dd532048d969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPrefab: {fileID: 176700, guid: 9d4619768912e61499f7bb9c71f62186, type: 2}
+  ship: {fileID: 1491379265}
+  count: 50
+  range: 30
+  height: 5
+  removeRange: 40
 --- !u!1 &1112368838
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +715,7 @@ GameObject:
   - 114: {fileID: 1491379266}
   - 114: {fileID: 1491379267}
   m_Layer: 0
-  m_Name: ship(UnityEngine.GameObject)(UnityEngine.GameObject)(UnityEngine.GameObject)
+  m_Name: ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
